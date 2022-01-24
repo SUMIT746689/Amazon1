@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+.bodys{
+  height: auto;
+  
+}
+btn ,input{
+  width: 100%;
+  background-color : rgba(0, 0, 0, 0.8) ;
+  color: white ; 
+  width: 40px ;
+  font-size: 20px;
+  border : none ;
+  padding: 5px;
+  border-radius: 4px ;
+  transition: all 0.3s ;
+  margin-right: 2px;
+} 
+btn:hover{
+  opacity:0.7;
+  cursor: pointer;
+
+}
+input{
+  font-weight: bolder;
+  text-align: center;
+}
+
+.cartPart {
+  display: grid;
+  grid-template-columns: 72% 26% ;
+  grid-column-gap: 10px;
+  transition: all 2s;
+  justify-content: space-around;
+  animation-name:cartAnimate ;
+  animation-duration: 2s;
+}
+
+@keyframes cartAnimate {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@media screen and (max-width: 950px){
+  .cartPart{
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
+
+.cartItem{
+  position: relative;
+  display:flex ;
+  justify-content :space-around;
+  align-items :center;
+  padding : 10px;
+  box-Shadow:0px 5px 15px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom : 10px;
+  border-Radius : 10px;
+  animation-timing-function: linear;
+  animation-duration:1s;
+  animation-name: cartItemAnime;
+}
+
+@keyframes cartItemAnime {
+  0%  {left : -70%;opacity:0;}
+  100%{left: 0%;};
+}
+
+.cartValuePart{
+  position:relative;
+  justify-content: space-around;
+  margin: auto;
+  width: 200px;
+  height: fit-content;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0);
+  padding: 20px;
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  animation-name: cartValueAnime;
+  animation-duration: 0.7s;
+}
+
+@keyframes cartValueAnime {
+  0%  {right : -100%;opacity:0;}
+  75% {right:10%}
+  100%{right:0%;opacity:1;};
+  
+}
+.footer{
+  margin-top: 60px;
+}
